@@ -31,6 +31,7 @@ target_sources( anamark-tuning-test PRIVATE
   tests/testutils.cpp
   tests/basics.cpp
   tests/scl_kbm.cpp
+  tests/compat.cpp
   )
 target_include_directories( anamark-tuning-test PRIVATE include libs/catch2 )
 target_link_libraries( anamark-tuning-test PRIVATE anamark-tuning-library )

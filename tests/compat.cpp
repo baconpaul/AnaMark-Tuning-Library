@@ -5,6 +5,9 @@
 #include <vector>
 #include <locale>
 #include <ctime>
+#include "testutils.h"
+
+using namespace TestUtils;
 
 /*
 ** ToDo
@@ -13,7 +16,6 @@
 ** few known tunings across the whole spectrun
 */
 
-extern std::string testFile(std::string fn);
 
 std::vector<std::string> testSCLs() {
     std::vector<std::string> res = { {
