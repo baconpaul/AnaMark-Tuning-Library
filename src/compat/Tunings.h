@@ -33,6 +33,8 @@
 #ifndef __INCLUDE_TUNINGS_H
 #define __INCLUDE_TUNINGS_H
 
+#include "AnaMark-Tuning-Library.h"
+
 #include <string>
 #include <vector>
 #include <iostream>
@@ -101,6 +103,9 @@ namespace Tunings
                   count(0)
             {
             }
+
+        // AnaMark adaptation
+        TUN::CSingleScale anamark_scl;
     };
 
     /**

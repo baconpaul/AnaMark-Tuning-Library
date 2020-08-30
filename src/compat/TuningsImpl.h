@@ -134,17 +134,15 @@ namespace Tunings
 
     inline Scale readSCLFile(std::string fname)
     {
-        throw TuningError( UNIMPL );
-
-        std::ifstream inf;
-        inf.open(fname);
-        if (!inf.is_open())
+        Scale res;
+        TUN::CSCL_Import scli;
+        if( ! scli.ReadSCL( fname.c_str() ) )
         {
-            std::string s = "Unable to open file '" + fname + "'";
-            throw TuningError(s);
+            throw TuningError( scli.Err().GetLastError() );
         }
 
-        auto res = scaleFromStream(inf);
+        scli.SetSingleScale( res.anamark_scl );
+        
         res.name = fname;
         return res;
     }
